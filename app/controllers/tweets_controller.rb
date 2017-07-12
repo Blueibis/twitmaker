@@ -16,7 +16,13 @@ class TweetsController < ApplicationController
           end
         end
         format.json do
-          render json: @tweet
+          if @tweet.save
+          render json: {
+            'message': @tweet.message,
+            'created_at': @tweet.created_at.strftime('%b %e, %l:%M %p')
+          }
+          else
+          end
         end
       end
     else
