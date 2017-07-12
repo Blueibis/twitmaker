@@ -14,11 +14,11 @@ $(function() {
       tweet.innerHTML = response
       document.querySelector('.tweets').prepend(tweet)
       // $('.tweets').prepend(response)
-      console.log(response)
       // document.querySelector('#create-tweet').disabled = false
       document.querySelector('#tweet_message').value = '';
       // tweet.innerHTML = response
       // $('.tweets').prepend()
+      console.log(response)
     }).fail(function() {
       console.log('air roar!!! air roar!!!');
     });
